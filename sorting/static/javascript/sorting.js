@@ -32,24 +32,22 @@ $(document).ready(function(){
         var type = $('#sort_type_value').attr('value');
         console.log(arr.length);
         if(type == 'Merge'){
-            console.log('merge sort selected');
         }
         else if(type == 'Bubble'){
-            console.log('bubble sort selected');
         }
         else if(type == 'Selection'){
-            console.log('selection sort selected');
         }
         else if(type == 'Heap'){
-            console.log('heap sort selected');
         }
         else if(type == 'Insertion'){
-            console.log('insertion sort selected');
         }
         else{
-            console.log('quick sort selected');
+            quickSort(arr);
         }
     })
+    function quickSort(arr){
+        
+    }
  });
 
 
