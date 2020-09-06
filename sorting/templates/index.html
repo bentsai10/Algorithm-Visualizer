@@ -31,8 +31,8 @@
               </ul>
             </div>
         </nav>
-        <div class = "container">
-            <h1 id = "current_sort_type" class="h1">Quick Sort</h1>
+        <div class = "container" id = "main_container">
+            <h1 id = "current_sort_type" class="h5">Quick Sort</h1>
             <div id = "sort_button">
                 <button class = "btn btn-light btn-sm sort_select_btn" id = "Quick">Quick</button>
                 <button class = "btn btn-light btn-sm sort_select_btn"  id = "Merge">Merge</button>
@@ -43,8 +43,12 @@
             </div>
             <input type="hidden" name="sort_type" id = "sort_type_value" value = "Quick">
             <h6>Array Length: <output name="array_len" id="array_len">10</output></h6>
-            <input type="range" name="array_len_input" id="array_len_input" value="10" min="5" max="100" oninput="array_len.value = array_len_input.value" class = "slider">
-            <button class = "btn btn-success ml-auto mr-auto" id = "sort_btn">Sort!</button>
+            <input type="range" name="array_len_input" id="array_len_input" value="10" min="5" max="200" oninput="array_len.value = array_len_input.value" class = "slider">
+            <div id = "green_btns">
+                <button class = "btn btn-success btn-sm" id = "new_array_btn">Generate New Array!</button>
+                <button class = "btn btn-success btn-sm" id = "sort_btn">Sort the Array!</button>
+            </div>
+            
         </div>
         <div class = "container" id = "array"></div>
     </body>

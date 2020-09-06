@@ -2,9 +2,9 @@ $(document).ready(function(){
     var arr = [];
     var output = "";
     for(var i = 0; i <10; i++){
-        arr[i] = Math.floor((Math.random() * 1000) + 1);
-        output += arr[i];
-        output += " ";
+        arr[i] = Math.floor(Math.random() * (500 - 10) + 10);
+        var bar_width = 920/10;
+        output += '<div id = "' + i + '" class = "array_bar" style = "background-color: pink;  margin: 0px 1px; font-size: 8px; width:' + bar_width + 'px; height: ' + arr[i] + 'px;">'+ arr[i] + '</div>';
     }
     $('#array').html(output);
     $(".sort_select_btn").click(function(){
@@ -15,14 +15,33 @@ $(document).ready(function(){
         output += " Sort";
         $('#current_sort_type').html(output);
     })
+    $("#new_array_btn").click(function(){
+        var x = $('#array_len').html();
+        arr = [];
+        var output = "";
+        for(var i = 0; i <x; i++){
+            arr[i] = Math.floor(Math.random() * (500 - 10) + 10);
+            var bar_width = 920/x;
+            if(x > 50){
+                output += '<div id = "' + i + '" class = "array_bar" style = "background-color: pink; margin: 0px 1px; font-size: 8px; width:' + bar_width + 'px; height: ' + arr[i] + 'px;">'+  '</div>';
+            }else{
+                output += '<div id = "' + i + '" class = "array_bar" style = "background-color: pink; margin: 0px 1px; font-size: 8px; width:' + bar_width + 'px; height: ' + arr[i] + 'px;">'+ arr[i] + '</div>';
+            }
+        }
+        $('#array').html(output);
+    })
     $('#array_len_input').change(function(){
         var x = $('#array_len').html();
         arr = [];
         var output = "";
-        for(var i = 0; i < x; i++){
-            arr[i] = Math.floor((Math.random() * 1000) + 1);
-            output += arr[i];
-            output += " ";
+        for(var i = 0; i <x; i++){
+            arr[i] = Math.floor(Math.random() * (500 - 10) + 10);
+            var bar_width = 920/x;
+            if(x > 50){
+                output += '<div id = "' + i + '" class = "array_bar" style = "background-color: pink; margin: 0px 1px; font-size: 8px; width:' + bar_width + 'px; height: ' + arr[i] + 'px;">'+  '</div>';
+            }else{
+                output += '<div id = "' + i + '" class = "array_bar" style = "background-color: pink; margin: 0px 1px; font-size: 8px; width:' + bar_width + 'px; height: ' + arr[i] + 'px;">'+ arr[i] + '</div>';
+            }
         }
         $('#array').html(output);
     })
@@ -42,12 +61,12 @@ $(document).ready(function(){
         else if(type == 'Insertion'){
         }
         else{
-            quickSort(arr);
+            // quickSort(arr);
         }
     })
-    function quickSort(arr){
-        
-    }
+    // function quickSort(arr){
+
+    // }
  });
 
 

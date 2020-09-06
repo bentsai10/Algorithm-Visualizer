@@ -1,14 +1,15 @@
 .container{
     margin-top: 20px;
     text-align: center;
+    outline: 1px solid black;
 }
 h6{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .slider {
     -webkit-appearance: none;
     width: 400px;
-    height: 15px;
+    height: 10px;
     background:black;
     outline: none;
     opacity: 0.7;
@@ -23,19 +24,30 @@ h6{
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: #14a3b8;
     cursor: pointer;
   }
   
   .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: #14a3b8;
     cursor: pointer;
   }
-  #sort_btn{
-      display: block;
-      margin-top: 10px;
-  }
+#array{
+    display: flex;
+    justify-content: center;
+    vertical-align: bottom;
+    margin-bottom: 20px;
+    height: 500px;
+}
+#green_btns{
+    display: flex;
+    width:fit-content;
+    margin: 0px auto;
+}
+#sort_btn{
+    margin-left: 10px;
+}
